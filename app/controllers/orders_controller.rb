@@ -5,7 +5,7 @@ class OrdersController < ApplicationController
     def create
         @order = Order.new#(order_params)
     
-        respond_to do |format|
+        respond_to do |formart|
           if @order.save
             format.html { redirect_to order_path, notice: 'Order was successfully created.' }
             

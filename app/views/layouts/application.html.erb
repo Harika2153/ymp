@@ -12,7 +12,11 @@
   </head>
 
   <body>
-  <%= render partial: "shared/navbar" %>
+  <% if session[:user_id] %>
+    <%= render partial: "orders/new" %>
+  <% else %>
+    <%= render partial: "shared/navbar" %>
+  <% end %>
   <div class="container">
     <%= render partial: "shared/flash" %>
     <%= yield %>

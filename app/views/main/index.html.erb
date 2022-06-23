@@ -1,9 +1,10 @@
 <div class="d-flex alig-items-center justify-content-center" <h1="" "welcome="" to="" delicous="" catering"="" style="font-size=3rem">
 
-    <% if @user&.present?%>
+    <% if @user&.owner? %>
         <h1>I AM THE OWNER !!! </h1>
-    <% else %>
-        <h1>WELCOME CUSTOMER </h1>
-    <% end %>
+        <% else %>
+            <h1>WELCOME CUSTOMER </h1>
+            
+ <% end %>
 </div>
 

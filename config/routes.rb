@@ -8,6 +8,13 @@ Rails.application.routes.draw do
   get "signin", to: "sessions#new"
   post "signin", to: "sessions#create"
   
+  
+  get "menu", to: "orders#new"
+  get "Breakfast", to: "orders#bf"
+  get "Lunch", to: "orders#lunch"
+  get "Dinner", to: "orders#dinner"
+  get "owner", to: "odash#onew"
+  
   delete "logout", to: "sessions#destroy"
   
   root to:"main#index"
