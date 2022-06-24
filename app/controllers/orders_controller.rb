@@ -4,6 +4,7 @@ class OrdersController < ApplicationController
       end
     def create
         @order = Order.new#(order_params)
+        
     
         respond_to do |formart|
           if @order.save
