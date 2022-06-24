@@ -1,4 +1,5 @@
 class Food < ActiveRecord::Base
-    
-    belongs_to :order
+    has_many :orderitems
+    has_many :orders
+    #belongs_to :orderitem
 end
